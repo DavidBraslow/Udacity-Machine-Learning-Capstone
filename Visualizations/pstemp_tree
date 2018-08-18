@@ -1,0 +1,38 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+graph [ranksep=equally, splines=polyline] ;
+0 [label="S3CLASSES <= 0.8278\ngini = 0.1968\nsamples = 3000\nvalue = [2668, 332]\nclass = No PSTEMP", fillcolor="#e58139df"] ;
+1 [label="gini = 0.0\nsamples = 1350\nvalue = [1350, 0]\nclass = No PSTEMP", fillcolor="#e58139ff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="X3THIMATH <= 11.5\ngini = 0.3215\nsamples = 1650\nvalue = [1318, 332]\nclass = No PSTEMP", fillcolor="#e58139bf"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="X3TCREDENGIN <= 1.75\ngini = 0.2623\nsamples = 1404\nvalue = [1186, 218]\nclass = No PSTEMP", fillcolor="#e58139d0"] ;
+2 -> 3 ;
+4 [label="X3THISCI <= 2.5\ngini = 0.2488\nsamples = 1367\nvalue = [1168, 199]\nclass = No PSTEMP", fillcolor="#e58139d4"] ;
+3 -> 4 ;
+5 [label="gini = 0.2271\nsamples = 1210\nvalue = [1052, 158]\nclass = No PSTEMP", fillcolor="#e58139d9"] ;
+4 -> 5 ;
+6 [label="gini = 0.3859\nsamples = 157\nvalue = [116, 41]\nclass = No PSTEMP", fillcolor="#e58139a5"] ;
+4 -> 6 ;
+7 [label="gini = 0.4996\nsamples = 37\nvalue = [18, 19]\nclass = PSTEMP", fillcolor="#399de50d"] ;
+3 -> 7 ;
+8 [label="X3TCREDSTEM <= 8.75\ngini = 0.4973\nsamples = 246\nvalue = [132, 114]\nclass = No PSTEMP", fillcolor="#e5813923"] ;
+2 -> 8 ;
+9 [label="X3TGPAHIMTH <= 2.75\ngini = 0.3797\nsamples = 106\nvalue = [79, 27]\nclass = No PSTEMP", fillcolor="#e58139a8"] ;
+8 -> 9 ;
+10 [label="gini = 0.2491\nsamples = 48\nvalue = [41, 7]\nclass = No PSTEMP", fillcolor="#e58139d3"] ;
+9 -> 10 ;
+11 [label="gini = 0.4518\nsamples = 58\nvalue = [38, 20]\nclass = No PSTEMP", fillcolor="#e5813979"] ;
+9 -> 11 ;
+12 [label="S2CHEM1S12 <= 0.1863\ngini = 0.4705\nsamples = 140\nvalue = [53, 87]\nclass = PSTEMP", fillcolor="#399de564"] ;
+8 -> 12 ;
+13 [label="gini = 0.3861\nsamples = 88\nvalue = [23, 65]\nclass = PSTEMP", fillcolor="#399de5a5"] ;
+12 -> 13 ;
+14 [label="gini = 0.4882\nsamples = 52\nvalue = [30, 22]\nclass = No PSTEMP", fillcolor="#e5813944"] ;
+12 -> 14 ;
+{rank=same ; 0} ;
+{rank=same ; 2} ;
+{rank=same ; 3; 8} ;
+{rank=same ; 4; 9; 12} ;
+{rank=same ; 1; 5; 6; 7; 10; 11; 13; 14} ;
+}
